@@ -3,7 +3,31 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2026
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevExpressGridExample.UI", "DevExpressGridExample.UI\DevExpressGridExample.UI.csproj", "{186A10F7-7B65-4CB7-A5CA-27CE6D1A5CE1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevExpressGridExample.Entities", "DevExpressGridExample.Entities\DevExpressGridExample.Entities.csproj", "{508259D0-6326-47EA-82DF-46B54A70BB63}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevExpressGridExample.BLL", "DevExpressGridExample.BLL\DevExpressGridExample.BLL.csproj", "{9DC91353-9586-4E16-8AEF-FE176A4F5ED1}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{186A10F7-7B65-4CB7-A5CA-27CE6D1A5CE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{186A10F7-7B65-4CB7-A5CA-27CE6D1A5CE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{186A10F7-7B65-4CB7-A5CA-27CE6D1A5CE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{186A10F7-7B65-4CB7-A5CA-27CE6D1A5CE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{508259D0-6326-47EA-82DF-46B54A70BB63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{508259D0-6326-47EA-82DF-46B54A70BB63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{508259D0-6326-47EA-82DF-46B54A70BB63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{508259D0-6326-47EA-82DF-46B54A70BB63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DC91353-9586-4E16-8AEF-FE176A4F5ED1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DC91353-9586-4E16-8AEF-FE176A4F5ED1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DC91353-9586-4E16-8AEF-FE176A4F5ED1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DC91353-9586-4E16-8AEF-FE176A4F5ED1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
