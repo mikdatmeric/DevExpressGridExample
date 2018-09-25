@@ -1,0 +1,21 @@
+﻿
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+Create PROCEDURE [dbo].[sp_veridoldur]
+	-- parametreler tanımlanıyor
+	@baslangicTarihi int,
+	@bitisTarihi int,
+	@malKodu nvarchar(50)
+
+AS
+BEGIN
+	-- Sorgu işlemi ve kontroller yapılıyor.
+    select STI.IslemTur IslemTur,STI.EvrakNo EvrakNo,Convert(datetime, CAST(STI.Tarih -2 as datetime),111) Tarih,
+	 case when STI.IslemTur=0 Then STI.Miktar else 0 end as GirisMiktar,
+	 case when STI.IslemTur=1 Then STI.Miktar else 0 end as CikisMiktar from STI 
+	where STI.Tarih>=@baslangicTarihi and STI.Tarih<=@bitisTarihi and STI.MalKodu=@malKodu
+END
+GO
