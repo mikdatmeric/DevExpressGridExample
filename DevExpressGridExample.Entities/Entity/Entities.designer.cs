@@ -83,6 +83,13 @@ namespace DevExpressGridExample.Entities.Entity
 				return this.GetTable<STK>();
 			}
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_veridoldur")]
+		public ISingleResult<sp_veridoldurResult> sp_veridoldur([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> baslangicTarihi, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> bitisTarihi, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string malKodu)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), baslangicTarihi, bitisTarihi, malKodu);
+			return ((ISingleResult<sp_veridoldurResult>)(result.ReturnValue));
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.STI")]
@@ -445,6 +452,104 @@ namespace DevExpressGridExample.Entities.Entity
 			if ((this.PropertyChanged != null))
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	public partial class sp_veridoldurResult
+	{
+		
+		private short _IslemTur;
+		
+		private string _EvrakNo;
+		
+		private System.Nullable<System.DateTime> _Tarih;
+		
+		private decimal _GirisMiktar;
+		
+		private decimal _CikisMiktar;
+		
+		public sp_veridoldurResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IslemTur", DbType="SmallInt NOT NULL")]
+		public short IslemTur
+		{
+			get
+			{
+				return this._IslemTur;
+			}
+			set
+			{
+				if ((this._IslemTur != value))
+				{
+					this._IslemTur = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EvrakNo", DbType="VarChar(16) NOT NULL", CanBeNull=false)]
+		public string EvrakNo
+		{
+			get
+			{
+				return this._EvrakNo;
+			}
+			set
+			{
+				if ((this._EvrakNo != value))
+				{
+					this._EvrakNo = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Tarih", DbType="DateTime")]
+		public System.Nullable<System.DateTime> Tarih
+		{
+			get
+			{
+				return this._Tarih;
+			}
+			set
+			{
+				if ((this._Tarih != value))
+				{
+					this._Tarih = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GirisMiktar", DbType="Decimal(25,6) NOT NULL")]
+		public decimal GirisMiktar
+		{
+			get
+			{
+				return this._GirisMiktar;
+			}
+			set
+			{
+				if ((this._GirisMiktar != value))
+				{
+					this._GirisMiktar = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CikisMiktar", DbType="Decimal(25,6) NOT NULL")]
+		public decimal CikisMiktar
+		{
+			get
+			{
+				return this._CikisMiktar;
+			}
+			set
+			{
+				if ((this._CikisMiktar != value))
+				{
+					this._CikisMiktar = value;
+				}
 			}
 		}
 	}
